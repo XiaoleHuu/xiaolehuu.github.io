@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello everyone! Welcome to my website. Now I am an undergraduate student in Fundan University, Shanghai, majoring **Electronic Information Science and Technology**. Recently, I am having my third-year final exams. It is really hard to survive this period, but I am trying my best. 
+Hello everyone! Welcome to my website. Now I am an undergraduate student in Fundan University, Shanghai, majoring **Electronics Information Science and Technology**. Recently, I am having my third-year final exams. It is really hard to survive this period, but I am trying my best. 
 
 A data-driven personal website
 ======

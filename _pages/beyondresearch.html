@@ -7,15 +7,29 @@ author_profile: true
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>视频卡片</title>
+  <title>我的视频合集</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .video-card {
-      width: 320px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
+    body {
       font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .video-card {
       background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
       transition: transform 0.2s;
     }
 
@@ -26,9 +40,8 @@ author_profile: true
     .video-thumbnail {
       position: relative;
       width: 100%;
-      height: 180px;
+      aspect-ratio: 16 / 9;
       background-color: #eee;
-      overflow: hidden;
     }
 
     .video-thumbnail img {
@@ -44,10 +57,10 @@ author_profile: true
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 48px;
-      color: rgba(255, 255, 255, 0.8);
-      pointer-events: none;
-      transition: 0.3s;
+      color: rgba(255, 255, 255, 0.85);
       opacity: 0;
+      transition: 0.3s;
+      pointer-events: none;
     }
 
     .video-thumbnail:hover .play-icon {
@@ -60,26 +73,68 @@ author_profile: true
       color: #222;
       text-decoration: none;
       display: block;
+      line-height: 1.4;
       transition: color 0.2s;
     }
 
     .video-title:hover {
-      color: #00A1D6; /* B站蓝 */
+      color: #00A1D6;
+    }
+
+    @media (max-width: 600px) {
+      .video-title {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="video-card">
-    <a href="https://www.bilibili.com/video/BV1Ts6DYcEJh/?share_source=copy_web&vd_source=af7f3b9c86e66cda8acee26834757238" target="_blank">
-      <div class="video-thumbnail">
-        <img src="/images/cover1.png" alt="再见2024 | 我记得每一分每一秒">
-        <div class="play-icon">▶</div>
-      </div>
-    </a>
-    <a href="https://www.bilibili.com/video/BV1Ts6DYcEJh/" target="_blank" class="video-title">
-      再见2024 ｜ 我记得每一分每一秒
-    </a>
+  <h2 style="text-align: center;">我的 B站视频合集</h2>
+
+  <div class="video-grid">
+
+    <!-- 视频卡片 1 -->
+    <div class="video-card">
+      <a href="https://www.bilibili.com/video/BV1Ts6DYcEJh/" target="_blank">
+        <div class="video-thumbnail">
+          <img src="/images/cover1.png" alt="再见2024 | 我记得每一分每一秒">
+          <div class="play-icon">▶</div>
+        </div>
+      </a>
+      <a href="https://www.bilibili.com/video/BV1Ts6DYcEJh/" target="_blank" class="video-title">
+        再见2024 ｜ 我记得每一分每一秒
+      </a>
+    </div>
+
+    <!-- 视频卡片 2 -->
+    <div class="video-card">
+      <a href="https://www.bilibili.com/video/BV2xx4y1b7zB/" target="_blank">
+        <div class="video-thumbnail">
+          <img src="/images/cover2.png" alt="视频标题2">
+          <div class="play-icon">▶</div>
+        </div>
+      </a>
+      <a href="https://www.bilibili.com/video/BV2xx4y1b7zB/" target="_blank" class="video-title">
+        视频标题2 ｜ 这里是简介文字
+      </a>
+    </div>
+
+    <!-- 视频卡片 3（可无限复制） -->
+    <div class="video-card">
+      <a href="https://www.bilibili.com/video/BV3yy7y1a8cC/" target="_blank">
+        <div class="video-thumbnail">
+          <img src="/images/cover3.png" alt="视频标题3">
+          <div class="play-icon">▶</div>
+        </div>
+      </a>
+      <a href="https://www.bilibili.com/video/BV3yy7y1a8cC/" target="_blank" class="video-title">
+        视频标题3 ｜ 支持移动端显示
+      </a>
+    </div>
+
+    <!-- 更多卡片在此添加 -->
+
   </div>
 
 </body>

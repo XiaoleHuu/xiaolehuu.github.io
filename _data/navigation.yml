@@ -11,6 +11,12 @@ main:
   - title: "Publications"
     url: /publications/
 
+  - title: "CV"
+    url: /cv-json/
+
+  - title: "Study"
+    url: /study/
+    
   - title: "Beyond Research"
     url: /beyondresearch/
   # - title: "Talks"
@@ -26,10 +32,7 @@ main:
     url: /year-archive/
     
   # - title: "CV"
-  #  url: /cv/
-    
-  - title: "CV"
-    url: /cv-json/
+  #  url: /cv/    
     
   - title: "Guide"
     url: /markdown/

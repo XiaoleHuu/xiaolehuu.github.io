@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: "<font face="Times New Roman">About me"
 author_profile: true
 redirect_from: 
   - /about/

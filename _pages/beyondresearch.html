@@ -1,38 +1,83 @@
----
-layout: archive
-title: "Beyond Research"
-permalink: /beyondresearch/
-author_profile: true
----
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113748417249707&bvid=BV1Ts6DYcEJh&cid=27634830637&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哔哩哔哩视频播放器</title>
+    <style>
+        .video-container {
+            position: relative;
+            width: 600px;
+            height: 337.5px; /* 16:9 Aspect Ratio */
+            margin: 0 auto;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .video-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container" id="videoContainer">
+        <!-- 封面图片和视频播放器将通过 JavaScript 动态加载 -->
+    </div>
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+    <script>
+        // 用户只需修改这里
+        const BV_URL = "BV1Ts6DYcEJh"; // 哔哩哔哩视频的 BV 号
 
-{% include base_path %}
+        // 获取视频信息
+        async function fetchBilibiliVideoInfo(bvid) {
+            const response = await fetch(`https://api.bilibili.com/x/web-interface/view?bvid=${bvid}`);
+            const data = await response.json();
+            return data;
+        }
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+        // 加载封面和播放器
+        async function loadVideo(bvid) {
+            const videoInfo = await fetchBilibiliVideoInfo(bvid);
+            if (videoInfo.data) {
+                const videoContainer = document.getElementById('videoContainer');
+                const coverUrl = `https://api.bilibili.com/x/player/pagelist?bvid=${bvid}&jsonp=jsonp`;
 
+                // 获取封面图片
+                fetch(coverUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const coverUrl = data.data[0].cover; // 第一个分页的封面
+                        const coverImg = document.createElement('img');
+                        coverImg.src = coverUrl;
+                        coverImg.alt = "视频封面";
+                        coverImg.style.width = "100%";
+                        coverImg.style.height = "100%";
+                        coverImg.style.objectFit = "cover";
+                        coverImg.addEventListener('click', () => {
+                            coverImg.style.display = 'none';
+                            const iframe = document.createElement('iframe');
+                            iframe.src = `https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=1`;
+                            iframe.style.width = "100%";
+                            iframe.style.height = "100%";
+                            videoContainer.appendChild(iframe);
+                        });
+                        videoContainer.appendChild(coverImg);
+                    });
+            }
+        }
+
+        // 加载视频
+        loadVideo(BV_URL);
+    </script>
+</body>
+</html>
 
 
 

@@ -16,3 +16,7 @@ This summer, I will go to the Royal Institute of Technology(KTH) for research in
 Rsearch Interests
 ======
 Complex network, Dynamics system, Control theory, Optimal control, Reinforcement learning, Game theory
+
+🔥 News
+======
+

@@ -17,6 +17,6 @@ Rsearch Interests
 ======
 Complex network, Dynamics system, Control theory, Optimal control, Reinforcement learning, Game theory
 
-🔥 News
+News
 ======
-
+1. _2025.05_ We have one journal paper accepted: Jie Ding, Yue Zhuo, Xiaole Hu*, Yan Zhao, Cong Li, Xiang Li. "Target Controllability of Complex Networks Based on Greedy Optimization", to appear in IEEE Transactions on Control of Network Systems. 

@@ -14,8 +14,8 @@ main:
   - title: "CV"
     url: /cv-json/
 
-  - title: "Study"
-    url: /study/
+  # - title: "Study"
+  #   url: /study/
     
   - title: "Beyond Research"
     url: /beyondresearch/

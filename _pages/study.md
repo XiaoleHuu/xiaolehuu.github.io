@@ -6,3 +6,4 @@ redirect_from:
   - /study/
   - /study.html
 ---
+{% include toc %}

@@ -14,11 +14,12 @@ main:
   - title: "CV"
     url: /cv-json/
 
-  # - title: "Study"
-  #   url: /study/
+  - title: "Research"
+    url: /research/
     
   - title: "Beyond Research"
     url: /beyondresearch/
+    
   # - title: "Talks"
   #   url: /talks/    
 

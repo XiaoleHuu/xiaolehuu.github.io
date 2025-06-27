@@ -20,7 +20,7 @@ Meanwhile, I will write some research proposals or overviews on the following to
 - Smart grid
 - Economics and game theory
 
-You can the documents in the Research subsite.
+You can the documents in the [Research](https://xiaolehuu.github.io/research/).
 
 Rsearch Interests
 ======

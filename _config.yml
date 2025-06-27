@@ -112,7 +112,7 @@ staticman:
   moderation             : true
   path                   : "_data/comments/{options.slug}"
   requiredFields         : ['name', 'email', 'message']
-  transform
+  transform              :
     email                : "md5"
   generatedFields:
     date:

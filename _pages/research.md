@@ -7,6 +7,4 @@ redirect_from:
   - /research.html
 ---
 
-{% include toc %}
-
 **Research**

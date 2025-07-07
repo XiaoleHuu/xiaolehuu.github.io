@@ -14,7 +14,7 @@ In the past year, I participated in **FDUROP** program, which provides research 
 This summer, I will go to the Royal Institute of Technology(KTH) for research internship, under the superversion of [Prof. Qianwen Xu](https://www.kth.se/profile/qianwenx). My research there will focus on smart grid and reinforcement learning.
 
 Meanwhile, I will write some research proposals or overviews on the following topics:
-- Network science (mainly foucus on dynamics)
+- Network science (mainly focus on dynamics)
 - Reinforcement learning and optimal control
 - Deep learning and optimization
 - Smart grid

@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Xiaole's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+  <main>
+    <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px;">
+      <img src="images/self.jpg" alt="项目图片" width="250">
+      <span style="text-align: left;">
+        <h2 >About me</h2>
+        <p style="line-height:30px;">
+        I am <strong>Xiaole Hu</strong>. Now I am in my last year as an undergraduate student studying in <strong>Fundan University, Shanghai, China</strong>, majoring in <strong>Electronic Information Science and Technology</strong>. I plan to persue a Ph.D degree in the future.    
+        </p>
+        <p style="line-height:30px;">
+        In the past year, I participated in FDUROP program, which provides research opportunities for undergraduate students in FDU. Under the supervision of Prof. Jie Ding, my research has focused on target controllability of complex networks, which is an interdisciplinary area between control theory and network science and has a strong relationship with graph theory.        
+        </p>
+        <p style="line-height:30px;">        
+        Now I am conducting summer research at the Royal Institute of Technology(KTH), under the superversion of Prof. Qianwen Xu. My research mainly focuses on the local energy trading. I will develop a full-stack trading platform.        
+        </p>        
+      </span>
+    </div>
+    <h2 style="text-align:left">Research Interests</h2>
+    <p style="text-align:left; line-height:30px;">My research interests are as follows:</p>
+    <ul style="text-align:left; line-height:30px;">
+      <li><strong>Complex Networks</strong></li>
+      <li><strong>Control</strong></li>
+      <li><strong>Optimization</strong></li>
+      <li><strong>Machine Learning</strong></li>      
+    </ul>
+    <h2 style="text-align:left">Publications</h2>
+  </main>
+  
+  <footer>
+    <p>© 2025 Xiaole</p>
+  </footer>
+  
+</body>
+
+</html>

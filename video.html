@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Xiaole's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+  <div id="navbar-placeholder"></div>
+  <script>
+      fetch('components/navbar.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('navbar-placeholder').innerHTML = data;
+          });
+  </script>
+    
+  <h1>I will share some videos made by me here.</h1>
+  <h1>To be continued...</h1>
+
+  <main>
+    
+  </main>
+  
+  <footer>
+    <p>© 2025 Xiaole</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #000000;
+  color:aliceblue
+}
+
+/* 整体 Header */
+header {
+  background-color: #000000; /* 改成白色背景，干净现代 */
+  width: 100%;
+  height: 64px; /* 稍微高一点，显得大气 */
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.08); /* 柔和阴影 */  
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* 网站名或 Logo */
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: aliceblue;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* 全部大写，视觉更强 */
+  cursor: pointer;
+}
+
+/* 导航链接 */
+nav a {
+  color: aliceblue;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 1.5rem;
+  position: relative;
+  padding-bottom: 4px; /* 给下划线留空间 */
+  transition: color 0.2s ease;
+  font-weight: bold;
+}
+
+/* 悬停效果：下划线动画 */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: aliceblue;
+  transition: width 0.5s ease;
+}
+
+nav a:hover {
+  color: aliceblue;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  max-width: 1200px; /* 你可以改成 1200px 或更窄 */
+  margin: 40px auto;   /* 让 container 居中 */
+  padding: 0 20px;  /* 左右内边距，让内容不贴边 */
+}
+
+@supports selector(::details-content) {
+  .warning {
+    display: none;
+  }
+}
+
+/* details 元素动画，打开时会改变 margin、border 等属性 */
+details {
+  transition: all 0.5s ease; /* 所有属性动画过渡 */
+  background: rgb(0, 0, 0);  /* 背景色为黑色 */
+}
+
+/* Add gap around open details */
+/* 打开的 details 元素之间增加间距 */
+details[open]:not(:first-child) {
+  margin-top: 0.5rem; /* 非第一个打开的 details 上方间距 */
+}
+details[open]:not(:last-child) {
+  margin-bottom: 0.5rem; /* 非最后一个打开的 details 下方间距 */
+}
+
+/* Add border to all details, but prevent a 2px-looking one when two successive details are collapsed */
+/* 给所有 details 添加边框，防止连续折叠时出现双重边框 */
+details:not([open]):has(+ details:not(details[open])) {
+  border-bottom-color: #000000; /* 折叠时底部边框为黑色 */
+}
+
+/* Animate all on summmary */
+/* summary 元素动画 */
+summary {
+  transition: all 0.5s ease; /* 所有属性动画过渡 */
+  padding: 0.5em 0em; /* 默认内边距 */
+  font-weight: bold; /* 加粗字体 */
+  font-size: large; /* 字体较大 */
+}
+
+summary {
+  color: aliceblue; /* 字体颜色 */
+  cursor: pointer; /* 鼠标悬停为指针 */
+  
+  /* Roll our own marker */
+  /* 自定义展开/收起图标 */
+  display: flex; /* 使用 flex 布局 */
+  gap: 0.5em; /* 子元素间距 */
+
+  /* Hover state */
+  /* 悬停时字体颜色变浅 */
+  &:hover {
+    color: #bab5b5;
+  }
+}
+
+/* details 内容区首尾去除 margin */
+.details-content-wrapper {
+  :first-child { margin-top: 0; }
+  :last-child { margin-bottom: 0; }
+}
+
+/* details 内容动画与裁剪 */
+::details-content {
+  transition: all 0.5s ease, content-visibility 0.5s allow-discrete; /* 动画过渡 */
+  height: 0; /* 默认高度为 0 */
+  overflow: clip; /* 裁剪溢出内容 */
+}
+
+/* 支持 interpolate-size 时的样式 */
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords; /* 启用尺寸插值 */
+  }
+  
+  ::details-content {
+    padding-inline: 1em; /* 左右内边距 */
+  }
+
+  [open]::details-content {
+    height: auto; /* 打开时高度自适应 */
+    padding: 0.5em 1em; /* 内边距 */
+  }
+}
+
+/* 不支持 interpolate-size 时的样式 */
+@supports not (interpolate-size: allow-keywords) {
+  [open]::details-content {
+    height: 150px; /* 打开时固定高度 */
+    overflow-y: scroll; /* 内容超出时滚动 */
+  }
+}
+
+.blog-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.blog-item {
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    line-height: 200px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.blog-item:hover {
+    transform: scale(1.05);
+}
+
+.blog-title {
+    font-size: 1.2em;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Xiaole's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+  <main>
+    <div class="blog-container">
+        <div class="blog-list">
+            <a href="blogs/blog1.html" class="blog-item">
+                <div class="blog-title">Blog Title 1</div>
+            </a>
+            <a href="blogs/blog2.html" class="blog-item">
+                <div class="blog-title">Blog Title 2</div>
+            </a>
+            <!-- Add more blog items here -->
+        </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>© 2026 Xiaole</p>
+  </footer>
+
+</body>
+</html>

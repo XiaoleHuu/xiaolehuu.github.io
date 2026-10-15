@@ -47,7 +47,7 @@ For the 25 photographs referenced by these pages, the original JPGs total 90,662
 - `site.js`: theme control, mobile navigation and gallery interactions
 - `components/navbar.html`: shared navigation reference; each page includes its navigation directly to avoid a fetch request and keep navigation available without JavaScript
 
-GitHub Pages should publish `main` / root. `.nojekyll` marks the site as plain static files. No changes to the separate `master` branch are needed.
+GitHub Pages should publish `main` / root. `.nojekyll` marks the site as plain static files. No changes to the separate `master` branch are needed. Styles and interaction scripts use a shared version query to prevent an older cached script from being mixed with a new gallery page; bump this version on all four pages when changing these assets.
 
 ## Verification
 

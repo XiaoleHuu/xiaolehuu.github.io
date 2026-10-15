@@ -47,57 +47,160 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => {
   if (!event.target.closest('.site-header')) closeMenu();
 });
-function loadGallery(details) {
-  details.querySelectorAll('img[data-src]').forEach(img => {
-    img.srcset = img.dataset.srcset;
-    img.src = img.dataset.src;
+// Decode off the reveal path; keep the inline preview until the photograph is ready.
+const fullImageLoads = new WeakMap();
+function revealImage(img) {
+  if (!img.dataset.src || fullImageLoads.has(img)) return;
+  img.loading = 'eager';
+  img.fetchPriority = 'high';
+  img.srcset = img.dataset.srcset;
+  img.src = img.dataset.src;
+  const ready = img.decode().then(() => {
+    img.classList.add('is-ready');
     img.removeAttribute('data-src');
     img.removeAttribute('data-srcset');
+  }).catch(() => {
+    // Preserve the inline print and allow another attempt when the album reopens.
+  }).finally(() => fullImageLoads.delete(img));
+  fullImageLoads.set(img, ready);
+}
+const galleryImageObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting || !entry.target.closest('details').open) return;
+    galleryImageObserver.unobserve(entry.target);
+    revealImage(entry.target);
   });
+}, { rootMargin: '180px 0px' }) : null;
+function loadGallery(details) {
+  const firstRow = details.querySelector('.gallery-row');
+  details.querySelectorAll('.photo-button img[data-src]').forEach(img => {
+    if (!galleryImageObserver || firstRow.contains(img)) revealImage(img);
+    else galleryImageObserver.observe(img);
+  });
+}
+// Warm only a small first print near the viewport or on explicit pointer/keyboard intent.
+const warmedImages = new WeakSet();
+const warmQueue = [];
+let warming = false;
+async function warmNext() {
+  if (warming || !warmQueue.length) return;
+  warming = true;
+  const img = warmQueue.shift();
+  if (img.dataset.src && !fullImageLoads.has(img)) {
+    const src = img.dataset.srcset.split(',')[0].trim().split(/\s+/)[0];
+    const preview = new Image();
+    preview.fetchPriority = 'low';
+    preview.decoding = 'async';
+    preview.src = src;
+    try {
+      await preview.decode();
+      img.closest('.photo-button').style.setProperty('--photo-preview', `url("${src}")`);
+    } catch (_) {}
+  }
+  warming = false;
+  warmNext();
+}
+function warmGallery(details) {
+  const connection = navigator.connection;
+  if (connection && (connection.saveData || /(^|-)2g$/.test(connection.effectiveType))) return;
+  const img = details.querySelector('.photo-button img[data-src]');
+  if (!img || warmedImages.has(img)) return;
+  warmedImages.add(img);
+  warmQueue.push(img);
+  warmNext();
 }
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const accordionAnimations = new WeakMap();
+const movingBlocks = new WeakMap();
+// Following sections slide with transforms, so opening a tall gallery does not
+// recalculate the layout on every animation frame.
+function followingBlocks(details) {
+  const blocks = [];
+  for (let node = details; node && node !== document.body; node = node.parentElement) {
+    for (let next = node.nextElementSibling; next; next = next.nextElementSibling) {
+      if (!next.matches('script, dialog')) blocks.push(next);
+    }
+  }
+  return blocks;
+}
 function setExpanded(details, expand, animate = true) {
   const previous = accordionAnimations.get(details);
-  const from = details.getBoundingClientRect().height;
-  if (previous) {
-    previous.animation.cancel();
-    accordionAnimations.delete(details);
-  }
-  const summary = details.querySelector('summary');
   const panel = details.querySelector('.accordion-panel');
-  if (!animate || reducedMotion.matches || !panel || !details.animate) {
+  const blocks = followingBlocks(details);
+  const positions = blocks.map(block => block.getBoundingClientRect().top);
+  const wasOpen = details.open;
+  const panelStyle = panel && wasOpen ? getComputedStyle(panel) : null;
+  const from = {
+    clipPath: panelStyle && panelStyle.clipPath !== 'none' ? panelStyle.clipPath : (wasOpen ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)'),
+    transform: panelStyle ? panelStyle.transform : 'translateY(-10px)',
+    opacity: panelStyle ? panelStyle.opacity : '0',
+  };
+  if (previous) { previous.animations.forEach(animation => animation.cancel()); accordionAnimations.delete(details); }
+  blocks.forEach(block => movingBlocks.get(block)?.cancel());
+  delete details.dataset.animating;
+  if (!animate || reducedMotion.matches || !panel || !panel.animate) {
     details.open = expand;
-    details.style.overflow = '';
     if (expand) loadGallery(details);
     return;
   }
-  details.open = true;
+  // Measure the destination once. Closing keeps the panel visible just for its reveal.
+  details.open = expand;
   if (expand) loadGallery(details);
-  const border = parseFloat(getComputedStyle(details).borderBottomWidth) || 0;
-  const to = summary.getBoundingClientRect().height + (expand ? panel.getBoundingClientRect().height : 0) + border;
-  details.style.overflow = 'hidden';
-  const animation = details.animate([{ height: `${from}px` }, { height: `${to}px` }], {
-    duration: 420,
-    easing: 'cubic-bezier(.22, .68, 0, 1)',
+  const destinations = blocks.map(block => block.getBoundingClientRect().top);
+  details.open = true;
+  const basePositions = blocks.map(block => block.getBoundingClientRect().top);
+  const duration = 300;
+  const timing = { duration, easing: 'cubic-bezier(.25, .1, .25, 1)', fill: 'both' };
+  const animations = blocks.map((block, index) => {
+    const animation = block.animate([
+      { transform: `translateY(${positions[index] - basePositions[index]}px)` },
+      { transform: `translateY(${destinations[index] - basePositions[index]}px)` },
+    ], timing);
+    movingBlocks.set(block, animation);
+    return animation;
   });
-  accordionAnimations.set(details, { animation, expanding: expand });
-  animation.onfinish = () => {
+  const reveal = panel.animate([from, {
+    clipPath: expand ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)',
+    transform: expand ? 'translateY(0)' : 'translateY(-10px)',
+    opacity: expand ? '1' : '0',
+  }], timing);
+  animations.push(reveal);
+  const state = { animations, expanding: expand };
+  accordionAnimations.set(details, state);
+  details.dataset.animating = '';
+  reveal.onfinish = () => {
+    if (accordionAnimations.get(details) !== state) return;
     details.open = expand;
-    details.style.overflow = '';
+    animations.forEach(animation => animation.cancel());
     accordionAnimations.delete(details);
-    animation.cancel();
+    delete details.dataset.animating;
   };
 }
 document.querySelectorAll('details').forEach(details => {
   details.addEventListener('toggle', () => { if (details.open) loadGallery(details); });
-  details.querySelector('summary').addEventListener('click', event => {
+  const summary = details.querySelector('summary');
+  summary.addEventListener('pointerenter', () => warmGallery(details), { passive: true });
+  summary.addEventListener('focus', () => warmGallery(details));
+  summary.addEventListener('pointerdown', () => warmGallery(details), { passive: true });
+  summary.addEventListener('click', event => {
     event.preventDefault();
     const animation = accordionAnimations.get(details);
     setExpanded(details, animation ? !animation.expanding : !details.open);
   });
   if (details.open) loadGallery(details);
 });
+if ('IntersectionObserver' in window) {
+  const nearbyAlbums = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { warmGallery(entry.target.closest('details')); nearbyAlbums.unobserve(entry.target); }
+    });
+  }, { rootMargin: '160px 0px' });
+  const observeAlbums = () => document.querySelectorAll('details:has(.gallery) > summary').forEach(summary => nearbyAlbums.observe(summary));
+  window.addEventListener('load', () => {
+    if ('requestIdleCallback' in window) requestIdleCallback(observeAlbums, { timeout: 1200 });
+    else setTimeout(observeAlbums, 300);
+  }, { once: true });
+}
 function revealHash() {
   let id;
   try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }

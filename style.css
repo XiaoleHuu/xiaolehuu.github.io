@@ -209,3 +209,11 @@ body:has(dialog[open]) { overflow: hidden; }
   .lightbox-bottom p { font-size: .78rem; }
   .lightbox-controls { gap: 6px; }
 }
+
+/* Tiny embedded previews render immediately; decoded photos fade in without reflow. */
+.gallery .photo-button { aspect-ratio: var(--photo-ratio); background-image: var(--photo-preview); background-position: center; background-size: 100% 100%; background-repeat: no-repeat; }
+.js .gallery .photo-button img { opacity: 0; transition: opacity .18s ease; }
+.js .gallery .photo-button img.is-ready { opacity: 1; }
+.accordion-panel { display: flow-root; }
+.life-page details { overflow-anchor: none; }
+.life-page details[data-animating] { border-bottom-color: transparent; }

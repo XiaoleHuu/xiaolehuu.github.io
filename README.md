@@ -17,7 +17,7 @@ Open http://127.0.0.1:4173/.
 - Soft cream / sage light palette and warm charcoal dark palette.
 - The first visit follows the system theme. The theme button saves your choice across pages and visits, and synchronizes it across tabs.
 - Desktop navigation becomes a collapsible menu below 600px. Content also adapts at 800px; gallery rows combine landscape and portrait prints on desktop, adapt to two columns on tablets when needed, and become one column on phones.
-- Country galleries slide open and closed, and load their photos when opened. Photographs appear as borderless prints at their complete original aspect ratios, with proportional rows and generous spacing. Clicking a photo opens a larger gallery view; swipe on phones, use previous/next buttons or the left/right arrow keys on desktop. Escape closes it and restores focus. Only the selected large print and its immediate neighbours load.
+- Country galleries use a transform and clip reveal rather than animating the whole document height. Tiny embedded previews appear immediately, nearby first prints are warmed at low priority, and full photographs are decoded before fading in. Full images below the viewport wait until they are near the screen. Prewarming is skipped for Data Saver and 2G connections. Photographs appear as borderless prints at their complete original aspect ratios, with proportional rows and generous spacing. Clicking a photo opens a larger gallery view; swipe on phones, use previous/next buttons or the left/right arrow keys on desktop. Escape closes it and restores focus. Only the selected large print and its immediate neighbours load.
 - Navigation, native accordions and fallback photos remain available without JavaScript. Keyboard focus, skip navigation and reduced motion preferences are supported.
 
 The biography and travel writing come from the original site. Empty blog/video sections are shown as work in progress. Reused Japan photos under China and incorrect Swiss landmark captions have been replaced with honest placeholders and neutral captions.
@@ -33,7 +33,7 @@ python -m pip install -r tools/requirements-images.txt
 python tools/optimize_images.py
 ```
 
-The generated manifest records widths, heights and byte sizes. If adding a photograph, add its HTML with the corresponding responsive sources and dimensions. Keep meaningful alt text and captions.
+The generated manifest records widths, heights and byte sizes. The image tool also refreshes the 48px embedded gallery previews (about 9 KB of base64 data across the current albums). If adding a photograph, add its HTML with the corresponding responsive sources and dimensions. Keep meaningful alt text and captions.
 
 For the 25 photographs referenced by these pages, the original JPGs total 90,662,373 bytes, the largest generated variants total 6,881,244 bytes, and the smallest variants total 863,286 bytes. These are asset-size comparisons, not measured page load times; actual transfers depend on device pixel ratio, viewport, opened galleries and caching.
 
@@ -52,3 +52,5 @@ GitHub Pages should publish `main` / root. `.nojekyll` marks the site as plain s
 ## Verification
 
 Checked in Microsoft Edge using Playwright at widths 320, 390, 768 and 1440px across all four pages. Checks cover horizontal overflow, active navigation, theme persistence, mobile menu / Escape, deferred gallery requests, full photo view / Escape, country deep links, no-JavaScript navigation / images and unavailable local storage. Additional gallery checks cover complete photo ratios, square corners, interrupted accordion animations, previous/next buttons, arrow keys, focus restoration, native mobile touch swipes and reduced motion. Desktop and phone layouts were also inspected visually.
+
+The first-open performance comparison used a cold cache, 180ms network latency, roughly 1.6Mbps download throughput and 4x CPU throttling. With speculative warming disabled, the Sweden reveal dropped from 39 layout passes to 4 on both desktop and mobile; Switzerland dropped from 40 to 4–7. These are measurements from a local browser simulation, not a guarantee of download speed on every connection. Full-resolution requests for off-screen Swiss prints were deferred instead of competing with the first print.

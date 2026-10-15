@@ -1,10 +1,13 @@
-<!-- This is an HTML fragment. It is intended to be included in other HTML files and does not contain <html>, <head>, or <body> tags. -->
-<header id="header"> 
-<nav class="links" style="--items: 4;">      
-    <a href="index.html">Academic</a>
-    <a href="life.html">Life</a>
-    <a href="video.html">Videos</a>
-    <a href="blog.html">Blog</a>
-    <span class="line"></span>
+<!-- Navigation reference. Pages include navigation directly for fast, script-free access. -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="site-name" href="index.html">Xiaole Hu<span aria-hidden="true">.</span></a>
+<nav id="navigation" aria-label="Main navigation"><a href="index.html">Academic</a><a href="life.html">Life</a><a href="video.html">Videos</a><a href="blog.html">Blog</a>
 </nav>
-<h
+<button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg>
+</button>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</header>

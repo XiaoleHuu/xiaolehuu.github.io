@@ -1,0 +1,542 @@
+{
+  "images/self.jpg": [
+    {
+      "src": "images/optimized/self-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 27196
+    },
+    {
+      "src": "images/optimized/self-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 70966
+    },
+    {
+      "src": "images/optimized/self-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 152032
+    }
+  ],
+  "images/Japan-trip/japan1.jpg": [
+    {
+      "src": "images/optimized/Japan-trip/japan1-480.webp",
+      "width": 480,
+      "height": 325,
+      "bytes": 9840
+    },
+    {
+      "src": "images/optimized/Japan-trip/japan1-960.webp",
+      "width": 960,
+      "height": 649,
+      "bytes": 31652
+    },
+    {
+      "src": "images/optimized/Japan-trip/japan1-1600.webp",
+      "width": 1600,
+      "height": 1082,
+      "bytes": 127892
+    }
+  ],
+  "images/Japan-trip/kanazawa1.jpg": [
+    {
+      "src": "images/optimized/Japan-trip/kanazawa1-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 52052
+    },
+    {
+      "src": "images/optimized/Japan-trip/kanazawa1-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 147568
+    },
+    {
+      "src": "images/optimized/Japan-trip/kanazawa1-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 269214
+    }
+  ],
+  "images/Japan-trip/kyoto1.jpg": [
+    {
+      "src": "images/optimized/Japan-trip/kyoto1-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 20800
+    },
+    {
+      "src": "images/optimized/Japan-trip/kyoto1-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 59010
+    },
+    {
+      "src": "images/optimized/Japan-trip/kyoto1-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 112152
+    }
+  ],
+  "images/Japan-trip/tokyo1.jpg": [
+    {
+      "src": "images/optimized/Japan-trip/tokyo1-480.webp",
+      "width": 480,
+      "height": 710,
+      "bytes": 50694
+    },
+    {
+      "src": "images/optimized/Japan-trip/tokyo1-960.webp",
+      "width": 960,
+      "height": 1420,
+      "bytes": 134316
+    },
+    {
+      "src": "images/optimized/Japan-trip/tokyo1-1600.webp",
+      "width": 1600,
+      "height": 2367,
+      "bytes": 351776
+    }
+  ],
+  "images/EU-trip/1b80cae8af1103a39db8a3bcd5db8da6.jpg": [
+    {
+      "src": "images/optimized/EU-trip/1b80cae8af1103a39db8a3bcd5db8da6-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 38272
+    },
+    {
+      "src": "images/optimized/EU-trip/1b80cae8af1103a39db8a3bcd5db8da6-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 128868
+    },
+    {
+      "src": "images/optimized/EU-trip/1b80cae8af1103a39db8a3bcd5db8da6-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 285784
+    }
+  ],
+  "images/EU-trip/denmark1.jpg": [
+    {
+      "src": "images/optimized/EU-trip/denmark1-480.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 36996
+    },
+    {
+      "src": "images/optimized/EU-trip/denmark1-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 134592
+    },
+    {
+      "src": "images/optimized/EU-trip/denmark1-1600.webp",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 339750
+    }
+  ],
+  "images/EU-trip/finland1.jpg": [
+    {
+      "src": "images/optimized/EU-trip/finland1-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 22084
+    },
+    {
+      "src": "images/optimized/EU-trip/finland1-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 71394
+    },
+    {
+      "src": "images/optimized/EU-trip/finland1-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 163688
+    }
+  ],
+  "images/EU-trip/finland2.jpg": [
+    {
+      "src": "images/optimized/EU-trip/finland2-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 30042
+    },
+    {
+      "src": "images/optimized/EU-trip/finland2-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 105540
+    },
+    {
+      "src": "images/optimized/EU-trip/finland2-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 236762
+    }
+  ],
+  "images/EU-trip/france1.jpg": [
+    {
+      "src": "images/optimized/EU-trip/france1-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 48718
+    },
+    {
+      "src": "images/optimized/EU-trip/france1-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 176512
+    },
+    {
+      "src": "images/optimized/EU-trip/france1-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 443338
+    }
+  ],
+  "images/EU-trip/france2.jpg": [
+    {
+      "src": "images/optimized/EU-trip/france2-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 77102
+    },
+    {
+      "src": "images/optimized/EU-trip/france2-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 285560
+    },
+    {
+      "src": "images/optimized/EU-trip/france2-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 666142
+    }
+  ],
+  "images/EU-trip/france3.jpg": [
+    {
+      "src": "images/optimized/EU-trip/france3-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 50652
+    },
+    {
+      "src": "images/optimized/EU-trip/france3-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 158888
+    },
+    {
+      "src": "images/optimized/EU-trip/france3-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 333970
+    }
+  ],
+  "images/EU-trip/france4.jpg": [
+    {
+      "src": "images/optimized/EU-trip/france4-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 52720
+    },
+    {
+      "src": "images/optimized/EU-trip/france4-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 177512
+    },
+    {
+      "src": "images/optimized/EU-trip/france4-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 391382
+    }
+  ],
+  "images/EU-trip/germany1.jpg": [
+    {
+      "src": "images/optimized/EU-trip/germany1-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 36774
+    },
+    {
+      "src": "images/optimized/EU-trip/germany1-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 118614
+    },
+    {
+      "src": "images/optimized/EU-trip/germany1-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 271952
+    }
+  ],
+  "images/EU-trip/germany2.jpg": [
+    {
+      "src": "images/optimized/EU-trip/germany2-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 22486
+    },
+    {
+      "src": "images/optimized/EU-trip/germany2-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 72222
+    },
+    {
+      "src": "images/optimized/EU-trip/germany2-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 180434
+    }
+  ],
+  "images/EU-trip/netherlands1.jpg": [
+    {
+      "src": "images/optimized/EU-trip/netherlands1-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 38970
+    },
+    {
+      "src": "images/optimized/EU-trip/netherlands1-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 161666
+    },
+    {
+      "src": "images/optimized/EU-trip/netherlands1-1600.webp",
+      "width": 1600,
+      "height": 2134,
+      "bytes": 434722
+    }
+  ],
+  "images/EU-trip/netherlands2.jpg": [
+    {
+      "src": "images/optimized/EU-trip/netherlands2-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 31168
+    },
+    {
+      "src": "images/optimized/EU-trip/netherlands2-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 106968
+    },
+    {
+      "src": "images/optimized/EU-trip/netherlands2-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 270364
+    }
+  ],
+  "images/EU-trip/route.jpg": [
+    {
+      "src": "images/optimized/EU-trip/route-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 25864
+    },
+    {
+      "src": "images/optimized/EU-trip/route-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 61540
+    },
+    {
+      "src": "images/optimized/EU-trip/route-1206.webp",
+      "width": 1206,
+      "height": 1608,
+      "bytes": 83258
+    }
+  ],
+  "images/EU-trip/stockholm1.jpg": [
+    {
+      "src": "images/optimized/EU-trip/stockholm1-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 25390
+    },
+    {
+      "src": "images/optimized/EU-trip/stockholm1-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 98616
+    },
+    {
+      "src": "images/optimized/EU-trip/stockholm1-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 254946
+    }
+  ],
+  "images/EU-trip/stockholm2.jpg": [
+    {
+      "src": "images/optimized/EU-trip/stockholm2-480.webp",
+      "width": 480,
+      "height": 270,
+      "bytes": 14390
+    },
+    {
+      "src": "images/optimized/EU-trip/stockholm2-960.webp",
+      "width": 960,
+      "height": 540,
+      "bytes": 55480
+    },
+    {
+      "src": "images/optimized/EU-trip/stockholm2-1600.webp",
+      "width": 1600,
+      "height": 900,
+      "bytes": 150730
+    }
+  ],
+  "images/EU-trip/switzerland1.jpg": [
+    {
+      "src": "images/optimized/EU-trip/switzerland1-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 31554
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland1-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 96254
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland1-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 217496
+    }
+  ],
+  "images/EU-trip/switzerland2.jpg": [
+    {
+      "src": "images/optimized/EU-trip/switzerland2-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 26608
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland2-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 89178
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland2-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 195112
+    }
+  ],
+  "images/EU-trip/switzerland3.jpg": [
+    {
+      "src": "images/optimized/EU-trip/switzerland3-480.webp",
+      "width": 480,
+      "height": 270,
+      "bytes": 43672
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland3-960.webp",
+      "width": 960,
+      "height": 540,
+      "bytes": 162886
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland3-1600.webp",
+      "width": 1600,
+      "height": 900,
+      "bytes": 377646
+    }
+  ],
+  "images/EU-trip/switzerland4.jpg": [
+    {
+      "src": "images/optimized/EU-trip/switzerland4-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 17762
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland4-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 73564
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland4-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 177518
+    }
+  ],
+  "images/EU-trip/switzerland5.jpg": [
+    {
+      "src": "images/optimized/EU-trip/switzerland5-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 26620
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland5-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 150170
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland5-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 462818
+    }
+  ],
+  "images/EU-trip/switzerland6.jpg": [
+    {
+      "src": "images/optimized/EU-trip/switzerland6-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 47934
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland6-960.webp",
+      "width": 960,
+      "height": 1280,
+      "bytes": 149332
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland6-1600.webp",
+      "width": 1600,
+      "height": 2133,
+      "bytes": 302030
+    }
+  ],
+  "images/EU-trip/switzerland7.jpg": [
+    {
+      "src": "images/optimized/EU-trip/switzerland7-480.webp",
+      "width": 480,
+      "height": 360,
+      "bytes": 20588
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland7-960.webp",
+      "width": 960,
+      "height": 720,
+      "bytes": 70536
+    },
+    {
+      "src": "images/optimized/EU-trip/switzerland7-1600.webp",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 169066
+    }
+  ]
+}

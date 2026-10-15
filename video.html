@@ -1,36 +1,42 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-  <title>Xiaole's Personal Website</title>
-  <link rel="stylesheet" href="style.css">
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A collection of videos made by Xiaole Hu.">
+<meta name="theme-color" content="#242628">
+<title>Videos · Xiaole Hu</title>
+<script src="theme-init.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
-
 <body>
-
-  <div id="navbar-placeholder"></div>
-  <script>
-      fetch('components/navbar.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('navbar-placeholder').innerHTML = data;
-          });
-  </script>
-    
-  <h1>I will share some videos made by me here.</h1>
-  <h1>To be continued...</h1>
-
-  <main>
-    
-  </main>
-  
-  <footer>
-    <p>© 2025 Xiaole</p>
-  </footer>
-
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="site-name" href="index.html">Xiaole Hu<span aria-hidden="true">.</span></a>
+<nav id="navigation" aria-label="Main navigation"><a href="index.html">Academic</a><a href="life.html">Life</a><a href="video.html" aria-current="page">Videos</a><a href="blog.html">Blog</a>
+</nav>
+<button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg>
+</button>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</header>
+<main id="main">
+<div class="page-heading"><span class="eyebrow">Moments in motion</span>
+<h1>Videos</h1>
+<p>I will share some videos made by me here.</p>
+</div>
+<section class="empty-state"><span class="eyebrow">In progress</span>
+<h2>To be continued…</h2>
+<p class="muted">A few stories are waiting to become films.</p><a href="life.html">Explore the photo journals →</a>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<p>© <span data-year>2026</span> Xiaole Hu</p><a href="#main">Back to top ↑</a>
+</div>
+</footer>
 </body>
-
 </html>

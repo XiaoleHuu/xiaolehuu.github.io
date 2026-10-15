@@ -1,0 +1,4 @@
+# Local validation output
+.qa/
+__pycache__/
+node_modules/

@@ -1,42 +1,42 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-  <title>Xiaole's Personal Website</title>
-  <link rel="stylesheet" href="style.css">
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Notes and thoughts by Xiaole Hu.">
+<meta name="theme-color" content="#242628">
+<title>Blog · Xiaole Hu</title>
+<script src="theme-init.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
-
 <body>
-
-    <div id="navbar-placeholder"></div>
-    <script>
-        fetch('components/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            });
-    </script>
-
-  <main>
-    <div class="blog-container">
-        <div class="blog-list">
-            <a href="blogs/blog1.html" class="blog-item">
-                <div class="blog-title">Blog Title 1</div>
-            </a>
-            <a href="blogs/blog2.html" class="blog-item">
-                <div class="blog-title">Blog Title 2</div>
-            </a>
-            <!-- Add more blog items here -->
-        </div>
-    </div>
-  </main>
-  
-  <footer>
-    <p>© 2026 Xiaole</p>
-  </footer>
-
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="site-name" href="index.html">Xiaole Hu<span aria-hidden="true">.</span></a>
+<nav id="navigation" aria-label="Main navigation"><a href="index.html">Academic</a><a href="life.html">Life</a><a href="video.html">Videos</a><a href="blog.html" aria-current="page">Blog</a>
+</nav>
+<button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg>
+</button>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</header>
+<main id="main">
+<div class="page-heading"><span class="eyebrow">Notes &amp; thoughts</span>
+<h1>Blog</h1>
+<p>A space for ideas, research notes and everyday discoveries.</p>
+</div>
+<section class="empty-state"><span class="eyebrow">In progress</span>
+<h2>Stories are on the way.</h2>
+<p class="muted">I will share my writing here. In the meantime, explore some moments from my travels.</p><a href="life.html">Explore life &amp; travels →</a>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<p>© <span data-year>2026</span> Xiaole Hu</p><a href="#main">Back to top ↑</a>
+</div>
+</footer>
 </body>
 </html>

@@ -1,56 +1,52 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-  <title>Xiaole's Personal Website</title>
-  <link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Xiaole Hu&#x27;s academic homepage: complex networks, control, optimization and machine learning.">
+<meta name="theme-color" content="#242628">
+<title>Academic · Xiaole Hu</title>
+<script src="theme-init.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
-
 <body>
-
-    <div id="navbar-placeholder"></div>
-    <script>
-        fetch('components/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            });
-    </script>
-
-  <main>
-    <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px;">
-      <img src="images/self.jpg" alt="项目图片" width="250">
-      <span style="text-align: left;">
-        <h2 >About me</h2>
-        <p style="line-height:30px;">
-        I am <strong>Xiaole Hu</strong>. Now I am in my last year as an undergraduate student studying in <strong>Fundan University, Shanghai, China</strong>, majoring in <strong>Electronic Information Science and Technology</strong>. I plan to persue a Ph.D degree in the future.    
-        </p>
-        <p style="line-height:30px;">
-        In the past year, I participated in FDUROP program, which provides research opportunities for undergraduate students in FDU. Under the supervision of Prof. Jie Ding, my research has focused on target controllability of complex networks, which is an interdisciplinary area between control theory and network science and has a strong relationship with graph theory.        
-        </p>
-        <p style="line-height:30px;">        
-        Now I am conducting summer research at the Royal Institute of Technology(KTH), under the superversion of Prof. Qianwen Xu. My research mainly focuses on the local energy trading. I will develop a full-stack trading platform.        
-        </p>        
-      </span>
-    </div>
-    <h2 style="text-align:left">Research Interests</h2>
-    <p style="text-align:left; line-height:30px;">My research interests are as follows:</p>
-    <ul style="text-align:left; line-height:30px;">
-      <li><strong>Complex Networks</strong></li>
-      <li><strong>Control</strong></li>
-      <li><strong>Optimization</strong></li>
-      <li><strong>Machine Learning</strong></li>      
-    </ul>
-    <h2 style="text-align:left">Publications</h2>
-  </main>
-  
-  <footer>
-    <p>© 2025 Xiaole</p>
-  </footer>
-  
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="header-inner">
+<a class="site-name" href="index.html">Xiaole Hu<span aria-hidden="true">.</span></a>
+<nav id="navigation" aria-label="Main navigation"><a href="index.html" aria-current="page">Academic</a><a href="life.html">Life</a><a href="video.html">Videos</a><a href="blog.html">Blog</a>
+</nav>
+<button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg>
+</button>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</header>
+<main id="main">
+<section class="about" aria-labelledby="about-heading">
+<figure><img src="images/optimized/self-960.webp" srcset="images/optimized/self-480.webp 480w, images/optimized/self-960.webp 960w, images/optimized/self-1600.webp 1600w" width="960" height="1280" alt="Portrait of Xiaole Hu" decoding="async" sizes="(max-width: 600px) 180px, (max-width: 800px) 200px, 250px" class="portrait" fetchpriority="high">
+</figure>
+<div><span class="eyebrow">Academic · Research · Life</span>
+<h1 id="about-heading">About me</h1>
+<p>I am <strong>Xiaole Hu</strong>. Now I am in my last year as an undergraduate student studying in <strong>Fudan University, Shanghai, China</strong>, majoring in <strong>Electronic Information Science and Technology</strong>. I plan to pursue a Ph.D degree in the future.</p>
+<p>In the past year, I participated in FDUROP program, which provides research opportunities for undergraduate students in FDU. Under the supervision of Prof. Jie Ding, my research has focused on target controllability of complex networks, which is an interdisciplinary area between control theory and network science and has a strong relationship with graph theory.</p>
+<p>Now I am conducting summer research at the Royal Institute of Technology (KTH), under the supervision of Prof. Qianwen Xu. My research mainly focuses on the local energy trading. I will develop a full-stack trading platform.</p>
+</div>
+</section>
+<section class="section" aria-labelledby="interests-heading">
+<h2 id="interests-heading">Research Interests</h2>
+<p class="muted">My research interests are as follows:</p><ul class="interests"><li>Complex Networks</li><li>Control</li><li>Optimization</li><li>Machine Learning</li></ul>
+</section>
+<section class="section" aria-labelledby="publications-heading">
+<h2 id="publications-heading">Publications</h2>
+<p class="muted">Updates will appear here.</p>
+</section>
+</main>
+<footer>
+<div class="footer-inner">
+<p>© <span data-year>2026</span> Xiaole Hu</p><a href="#main">Back to top ↑</a>
+</div>
+</footer>
 </body>
-
 </html>

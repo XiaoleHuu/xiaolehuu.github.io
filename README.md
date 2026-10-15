@@ -16,8 +16,8 @@ Open http://127.0.0.1:4173/.
 
 - Soft cream / sage light palette and warm charcoal dark palette.
 - The first visit follows the system theme. The theme button saves your choice across pages and visits, and synchronizes it across tabs.
-- Desktop navigation becomes a collapsible menu below 600px. Content also adapts at 800px; galleries use two columns on desktop and one on phones.
-- Country galleries load their photos when opened. Clicking a photo opens a larger view; Escape closes it and restores focus.
+- Desktop navigation becomes a collapsible menu below 600px. Content also adapts at 800px; gallery rows combine landscape and portrait prints on desktop, adapt to two columns on tablets when needed, and become one column on phones.
+- Country galleries slide open and closed, and load their photos when opened. Photographs appear as borderless prints at their complete original aspect ratios, with proportional rows and generous spacing. Clicking a photo opens a larger gallery view; swipe on phones, use previous/next buttons or the left/right arrow keys on desktop. Escape closes it and restores focus. Only the selected large print and its immediate neighbours load.
 - Navigation, native accordions and fallback photos remain available without JavaScript. Keyboard focus, skip navigation and reduced motion preferences are supported.
 
 The biography and travel writing come from the original site. Empty blog/video sections are shown as work in progress. Reused Japan photos under China and incorrect Swiss landmark captions have been replaced with honest placeholders and neutral captions.
@@ -51,4 +51,4 @@ GitHub Pages should publish `main` / root. `.nojekyll` marks the site as plain s
 
 ## Verification
 
-Checked in Microsoft Edge using Playwright at widths 320, 390, 768 and 1440px across all four pages. Checks cover horizontal overflow, active navigation, theme persistence, mobile menu / Escape, deferred gallery requests, full photo view / Escape, country deep links, no-JavaScript navigation / images and unavailable local storage. Desktop and phone layouts were also inspected visually.
+Checked in Microsoft Edge using Playwright at widths 320, 390, 768 and 1440px across all four pages. Checks cover horizontal overflow, active navigation, theme persistence, mobile menu / Escape, deferred gallery requests, full photo view / Escape, country deep links, no-JavaScript navigation / images and unavailable local storage. Additional gallery checks cover complete photo ratios, square corners, interrupted accordion animations, previous/next buttons, arrow keys, focus restoration, native mobile touch swipes and reduced motion. Desktop and phone layouts were also inspected visually.

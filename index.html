@@ -7,8 +7,8 @@
 <meta name="theme-color" content="#242628">
 <title>Academic · Xiaole Hu</title>
 <script src="theme-init.js"></script>
-<link rel="stylesheet" href="style.css?v=20261015-3">
-<script src="site.js?v=20261015-3" defer></script>
+<link rel="stylesheet" href="style.css?v=20261016-1">
+<script src="site.js?v=20261016-1" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -27,20 +27,78 @@
 <section class="about" aria-labelledby="about-heading">
 <figure><img src="images/optimized/self-960.webp" srcset="images/optimized/self-480.webp 480w, images/optimized/self-960.webp 960w, images/optimized/self-1600.webp 1600w" width="960" height="1280" alt="Portrait of Xiaole Hu" decoding="async" sizes="(max-width: 600px) 180px, (max-width: 800px) 200px, 250px" class="portrait" fetchpriority="high">
 </figure>
-<div><span class="eyebrow">Academic · Research · Life</span>
+<div><span class="eyebrow">Academic · Life</span>
 <h1 id="about-heading">About me</h1>
-<p>I am <strong>Xiaole Hu</strong>. Now I am in my last year as an undergraduate student studying in <strong>Fudan University, Shanghai, China</strong>, majoring in <strong>Electronic Information Science and Technology</strong>. I plan to pursue a Ph.D degree in the future.</p>
-<p>In the past year, I participated in FDUROP program, which provides research opportunities for undergraduate students in FDU. Under the supervision of Prof. Jie Ding, my research has focused on target controllability of complex networks, which is an interdisciplinary area between control theory and network science and has a strong relationship with graph theory.</p>
-<p>Now I am conducting summer research at the Royal Institute of Technology (KTH), under the supervision of Prof. Qianwen Xu. My research mainly focuses on the local energy trading. I will develop a full-stack trading platform.</p>
+<p>I am <strong>Xiaole Hu</strong>. Now I am a Ph.D. student at <strong>the Chinese University of Hong Kong</strong>, supervised by Prof. Songtao Lu. My research mainly focuses on applying optimization theory to improve LLMs' capability.</p>
+<p>Before that, I received my B.Eng. in <strong>Electronic Information Science and Technology</strong> from <strong>Fudan University</strong>, supervised by Prof. Jie Ding, and had a summer research at the Royal Institute of Technology (KTH).</p>
+<p><strong>Email:</strong> xiaolehu05[at]gmail.com</p>
 </div>
 </section>
 <section class="section" aria-labelledby="interests-heading">
 <h2 id="interests-heading">Research Interests</h2>
-<p class="muted">My research interests are as follows:</p><ul class="interests"><li>Complex Networks</li><li>Control</li><li>Optimization</li><li>Machine Learning</li></ul>
+<p class="muted">My research interests are as follows:</p><ul class="interests"><li>Optimization</li><li>Machine Learning</li><li>Large Language Models</li><li>Complex Networks</li></ul>
 </section>
-<section class="section" aria-labelledby="publications-heading">
+<section class="section publications" id="publications" aria-labelledby="publications-heading">
 <h2 id="publications-heading">Publications</h2>
-<p class="muted">Updates will appear here.</p>
+<article class="publication" aria-labelledby="mctp-title" data-figure-gallery>
+<div class="publication-meta"><span class="publication-status">Accepted</span><span>Awaiting online publication</span></div>
+<h3 id="mctp-title">A Unified Framework for Target Controllability of Complex Networks under Input Constraints</h3>
+<p class="publication-authors"><strong>Xiaole Hu</strong>, Jie Ding, and Xiang Li</p>
+<p class="publication-venue">IEEE Transactions on Control of Network Systems (T-CNS)</p>
+<p class="publication-summary">A unified minimum-cost flow framework for target controllability under input constraints, covering hierarchical targets, control costs, and robustness.</p>
+<details class="publication-abstract"><summary>Abstract</summary><div class="accordion-panel"><p>In this paper, we mainly investigate three important problems for target controllability of complex networks, with a particular focus on practical input constraints where driver nodes can only be selected from a predefined subset rather than freely across the entire network. Under such constraints, networks are often not structurally controllable. This necessitates minimizing the number of driver nodes while maximizing the number of controllable target nodes, leading to the constrained target controllability problem. Building upon this, we consider two additional related problems: constrained multilevel target controllability, where the target node set is divided into multiple hierarchical subsets, and the objective is to maximize the number of controllable target nodes of each subset in a levelwise order, and constrained minimum-cost target controllability, which focuses on minimizing the total cost of control paths and cycles. To address these problems, we propose a novel unified framework called “minimum-cost flow based target path cover” (MCTP). Simulation results on Erdős–Rényi, scale-free, and real-world networks demonstrate the effectiveness and scalability of the MCTP framework. Additionally, we introduce two new measures to evaluate the robustness of target controllability with MCTP. The versatility of the MCTP framework suggests that it offers a powerful and generalizable tool for analyzing target controllability problems across a wide range of networks.</p></div></details>
+<div class="publication-figures" role="group" aria-label="MCTP paper figures">
+<figure>
+<a class="photo-button publication-figure" href="images/publications/mctp-framework-3000.webp" data-full="images/publications/mctp-framework-3000.webp" aria-label="Enlarge figure: MCTP framework">
+<img src="images/publications/mctp-framework-640.webp" srcset="images/publications/mctp-framework-640.webp 640w, images/publications/mctp-framework-1280.webp 1280w, images/publications/mctp-framework-3000.webp 3000w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 48px), 350px" width="3000" height="1293" alt="Six-panel diagram transforming an input-constrained network into a minimum-cost flow network and target path cover." loading="lazy" decoding="async">
+</a>
+<figcaption class="photo-caption">MCTP framework</figcaption>
+</figure>
+<figure>
+<a class="photo-button publication-figure" href="images/publications/mctp-er-1600.webp" data-full="images/publications/mctp-er-1600.webp" aria-label="Enlarge figure: Erdős–Rényi networks">
+<img src="images/publications/mctp-er-640.webp" srcset="images/publications/mctp-er-640.webp 640w, images/publications/mctp-er-1280.webp 1280w, images/publications/mctp-er-1600.webp 1600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc((100vw - 72px) / 2), 350px" width="1600" height="1378" alt="Driver node count versus controllable target node count in Erdős–Rényi networks, for different input constraints and network parameters." loading="lazy" decoding="async">
+</a>
+<figcaption class="photo-caption">Erdős–Rényi networks</figcaption>
+</figure>
+<figure>
+<a class="photo-button publication-figure" href="images/publications/mctp-sf-1598.webp" data-full="images/publications/mctp-sf-1598.webp" aria-label="Enlarge figure: Scale-free networks">
+<img src="images/publications/mctp-sf-640.webp" srcset="images/publications/mctp-sf-640.webp 640w, images/publications/mctp-sf-1280.webp 1280w, images/publications/mctp-sf-1598.webp 1598w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc((100vw - 72px) / 2), 350px" width="1598" height="1376" alt="Driver node count versus controllable target node count in scale-free networks, for different input constraints and network parameters." loading="lazy" decoding="async">
+</a>
+<figcaption class="photo-caption">Scale-free networks</figcaption>
+</figure>
+</div>
+<p class="figure-note">Select a figure to enlarge · Swipe or use arrow keys to browse</p>
+</article>
+<article class="publication" aria-labelledby="greedy-title" data-figure-gallery>
+<div class="publication-meta"><span class="publication-status">Published</span><span>December 2025</span></div>
+<h3 id="greedy-title"><a href="https://ieeexplore.ieee.org/document/11066242/">Target Controllability of Complex Networks Based on Greedy Optimization</a></h3>
+<p class="publication-authors">Jie Ding, Yue Zhuo, <strong>Xiaole Hu</strong>, Yan Zhao, Cong Li, and Xiang Li</p>
+<p class="publication-venue">IEEE Transactions on Control of Network Systems, vol. 12, no. 4, pp. 2630–2641, 2025</p>
+<p class="publication-summary">An NP-hardness proof and four greedy algorithms for target controllability, with degree- and frequency-based matching strategies evaluated on synthetic and real-world networks.</p>
+<div class="publication-links"><a href="https://ieeexplore.ieee.org/document/11066242/">Read on IEEE Xplore ↗</a><a href="https://doi.org/10.1109/TCNS.2025.3585397">DOI ↗</a></div>
+<details class="publication-abstract"><summary>Abstract</summary><div class="accordion-panel"><p>Controlling large complex networks is a common and important problem. In the field of network control, controlling target nodes is more efficient and feasible than controlling all nodes to achieve the desired functionality for a network system. This article revisits the target controllability problem and theoretically proves that it is NP-hard by reducing it from three-dimensional matching. Moreover, four greedy algorithms are proposed. Three of them follow the order of in-degree, out-degree, and degree for maximum matching during iterations, respectively. The fourth algorithm uses an updated matching order based on in-degree as well as frequency, which reflects the number of times the nodes are matched in previous iterations. Simulations on synthetic and real-world networks are carried out, which illustrate the satisfactory performance of the proposed algorithm using an updated matching order. The results presented in this article provide valuable insights into the efficient control of complex networks in real-world applications.</p></div></details>
+<div class="publication-figures" role="group" aria-label="Greedy optimization paper figures">
+<figure>
+<a class="photo-button publication-figure" href="images/publications/greedy-matching-2800.webp" data-full="images/publications/greedy-matching-2800.webp" aria-label="Enlarge figure: Greedy matching strategies">
+<img src="images/publications/greedy-matching-640.webp" srcset="images/publications/greedy-matching-640.webp 640w, images/publications/greedy-matching-1280.webp 1280w, images/publications/greedy-matching-2800.webp 2800w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc(100vw - 48px), 350px" width="2800" height="2051" alt="Directed network and bipartite matching diagrams comparing GA, OBGA, DBGA, IBGA, and FBGA." loading="lazy" decoding="async">
+</a>
+<figcaption class="photo-caption">Greedy matching strategies</figcaption>
+</figure>
+<figure>
+<a class="photo-button publication-figure" href="images/publications/greedy-trajectories-1980.webp" data-full="images/publications/greedy-trajectories-1980.webp" aria-label="Enlarge figure: Inputs and target-node trajectories">
+<img src="images/publications/greedy-trajectories-640.webp" srcset="images/publications/greedy-trajectories-640.webp 640w, images/publications/greedy-trajectories-1280.webp 1280w, images/publications/greedy-trajectories-1980.webp 1980w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc((100vw - 72px) / 2), 350px" width="1980" height="2800" alt="Four examples showing input signals and corresponding state trajectories of the target nodes." loading="lazy" decoding="async">
+</a>
+<figcaption class="photo-caption">Inputs and target-node trajectories</figcaption>
+</figure>
+<figure>
+<a class="photo-button publication-figure" href="images/publications/greedy-networks-2600.webp" data-full="images/publications/greedy-networks-2600.webp" aria-label="Enlarge figure: Target control on ER and SF networks">
+<img src="images/publications/greedy-networks-640.webp" srcset="images/publications/greedy-networks-640.webp 640w, images/publications/greedy-networks-1280.webp 1280w, images/publications/greedy-networks-2600.webp 2600w" sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 800px) calc((100vw - 72px) / 2), 350px" width="2600" height="1838" alt="Four panels comparing driver-node fractions as target-node fractions increase in Erdős–Rényi and scale-free networks." loading="lazy" decoding="async">
+</a>
+<figcaption class="photo-caption">Target control on ER and SF networks</figcaption>
+</figure>
+</div>
+<p class="figure-note">Figures from the author’s manuscript · Select a figure to enlarge</p>
+</article>
 </section>
 </main>
 <footer>

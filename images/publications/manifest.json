@@ -1,0 +1,122 @@
+{
+  "mctp-framework": [
+    {
+      "src": "images/publications/mctp-framework-640.webp",
+      "width": 640,
+      "height": 276,
+      "bytes": 21690
+    },
+    {
+      "src": "images/publications/mctp-framework-1280.webp",
+      "width": 1280,
+      "height": 552,
+      "bytes": 55464
+    },
+    {
+      "src": "images/publications/mctp-framework-3000.webp",
+      "width": 3000,
+      "height": 1293,
+      "bytes": 159386
+    }
+  ],
+  "mctp-er": [
+    {
+      "src": "images/publications/mctp-er-640.webp",
+      "width": 640,
+      "height": 551,
+      "bytes": 40332
+    },
+    {
+      "src": "images/publications/mctp-er-1280.webp",
+      "width": 1280,
+      "height": 1102,
+      "bytes": 107002
+    },
+    {
+      "src": "images/publications/mctp-er-1600.webp",
+      "width": 1600,
+      "height": 1378,
+      "bytes": 94554
+    }
+  ],
+  "mctp-sf": [
+    {
+      "src": "images/publications/mctp-sf-640.webp",
+      "width": 640,
+      "height": 551,
+      "bytes": 41156
+    },
+    {
+      "src": "images/publications/mctp-sf-1280.webp",
+      "width": 1280,
+      "height": 1102,
+      "bytes": 117892
+    },
+    {
+      "src": "images/publications/mctp-sf-1598.webp",
+      "width": 1598,
+      "height": 1376,
+      "bytes": 132222
+    }
+  ],
+  "greedy-matching": [
+    {
+      "src": "images/publications/greedy-matching-640.webp",
+      "width": 640,
+      "height": 469,
+      "bytes": 40162
+    },
+    {
+      "src": "images/publications/greedy-matching-1280.webp",
+      "width": 1280,
+      "height": 938,
+      "bytes": 105560
+    },
+    {
+      "src": "images/publications/greedy-matching-2800.webp",
+      "width": 2800,
+      "height": 2051,
+      "bytes": 160796
+    }
+  ],
+  "greedy-trajectories": [
+    {
+      "src": "images/publications/greedy-trajectories-640.webp",
+      "width": 640,
+      "height": 905,
+      "bytes": 51282
+    },
+    {
+      "src": "images/publications/greedy-trajectories-1280.webp",
+      "width": 1280,
+      "height": 1810,
+      "bytes": 125912
+    },
+    {
+      "src": "images/publications/greedy-trajectories-1980.webp",
+      "width": 1980,
+      "height": 2800,
+      "bytes": 128120
+    }
+  ],
+  "greedy-networks": [
+    {
+      "src": "images/publications/greedy-networks-640.webp",
+      "width": 640,
+      "height": 452,
+      "bytes": 28234
+    },
+    {
+      "src": "images/publications/greedy-networks-1280.webp",
+      "width": 1280,
+      "height": 905,
+      "bytes": 77774
+    },
+    {
+      "src": "images/publications/greedy-networks-2600.webp",
+      "width": 2600,
+      "height": 1838,
+      "bytes": 121458
+    }
+  ]
+}

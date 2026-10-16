@@ -250,10 +250,15 @@ if (photos.length) {
     updateSlide(index);
     viewport.scrollTo({ left: currentIndex * viewport.clientWidth, behavior: animate && !reducedMotion.matches ? 'smooth' : 'instant' });
   }
-  photos.forEach(button => button.addEventListener('click', () => {
-    const album = button.closest('details');
+  photos.forEach(button => button.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const album = button.closest('[data-figure-gallery], details');
     collection = [...album.querySelectorAll('.photo-button')];
-    dialog.querySelector('.lightbox-album').textContent = album.querySelector('.album-name').textContent;
+    const publication = album.matches('[data-figure-gallery]');
+    dialog.setAttribute('aria-label', publication ? 'Publication figures' : 'Photo gallery');
+    viewport.setAttribute('aria-label', publication ? 'Figures. Swipe or use arrow keys to browse.' : 'Photographs. Swipe or use arrow keys to browse.');
+    dialog.querySelector('.lightbox-album').textContent = publication ? 'Publication figures' : album.querySelector('.album-name').textContent;
     viewport.replaceChildren(...collection.map(item => {
       const slide = document.createElement('div');
       slide.className = 'lightbox-slide';
